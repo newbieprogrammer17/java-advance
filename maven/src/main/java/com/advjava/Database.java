@@ -21,10 +21,12 @@ public class Database {
 		// private constructor so class cannot be initiated from outside.
 	}
 	
+	// database connection method can be called throughout the project.
 	public static void connectDb() throws SQLException {
 		conn = DriverManager.getConnection(URL, "root", "pass@123");
 	}
 	
+	// database close method.
 	public void closeDb() throws SQLException {
 		conn.close();
 	}
