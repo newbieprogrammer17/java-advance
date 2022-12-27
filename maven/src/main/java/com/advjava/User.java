@@ -1,32 +1,37 @@
 package com.advjava;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.Optional;
-
-public class User implements Dao{
-
-	@Override
-	public void save(Object t) {
-		
-		
+public class User {
+	
+	private int id;
+	private String name;
+	
+	public User(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	public User(String name) {
+		super();
+		this.name = name;
 	}
 
-	@Override
-	public Optional findById(int id) {
-		
-		return null;
+	public int getId() {
+		return id;
 	}
 
-	@Override
-	public void update(Object t) {
-			
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	@Override
-	public void delete(Object t) {
-		
-		
+	public String getName() {
+		return name;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 
 }
