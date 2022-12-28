@@ -13,21 +13,8 @@ public class App
 {
     public static void main( String[] args )
     {
-		Properties props = new Properties();
-		try {
-			props.load(App.class.getResourceAsStream("/config/db.properties"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 		
-		Database db = Database.instance();
-		
-		try {
-			var conn = db.connectDb(props);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-    	
+    	//Referencing to an userDao Class
     	UserDaoImpl userDao = new UserDaoImpl();
 		/* userDao.save(new User("Sachin")); */
     	
